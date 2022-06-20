@@ -1,11 +1,8 @@
 <?php
 
-function binarySum (string $a2, string $b2)
+function binarySum(string $a2, string $b2)
 {
-    $isFirstOperandIncorrect = ((int) $a2 === 0 && $a2 !== '0') || (int) $a2 < 0;
-    $isSecondOperandIncorrect = ((int) $b2 === 0 && $b2 !== '0') || (int) $b2 < 0;
-
-    if ($isFirstOperandIncorrect || $isSecondOperandIncorrect) {
+    if (!preg_match('/^[0-1]+$/', $a2) || !preg_match('/^[0-1]+$/', $b2)) {
         throw new ErrorException('One of operands or both are invalid');
     }
 
