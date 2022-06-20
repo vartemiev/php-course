@@ -1,16 +1,18 @@
 <?php
-$cache = [0, 1, 1];
 
-$fib = function($num) use($cache)
+function fib($num)
 {
+    static $cache = [0, 1, 1];
+
     if (isset($cache[$num])) {
         return $cache[$num];
     }
 
     for ($i = count($cache); $i <= $num; $i++) {
-        $cacheLen = count($cache);
-        $cache[] = $cache[$cacheLen - 1] + $cache[$cacheLen - 2];
+        $cache[] = $cache[$i - 1] + $cache[$i - 2];
     }
 
-    return $cache[count($cache) - 1];
+    return $cache[$i - 1];
 };
+
+echo fib(9);
