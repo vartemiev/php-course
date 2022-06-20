@@ -2,7 +2,7 @@
 function isPowerOfThree(int $num)
 {
     if ($num < 0) {
-        throw new ErrorException('Passed number can not be a natural power of three');
+        return false;
     }
 
     while (is_int($num) && $num > 1) {
