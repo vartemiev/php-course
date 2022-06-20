@@ -14,5 +14,3 @@ function fib($num)
 
     return $cache[$i - 1];
 };
-
-echo fib(9);
