@@ -1,0 +1,21 @@
+{
+    "name": "vartemev/php-course",
+    "license": "UNLICENSED",
+    "autoload": {
+        "psr-4": {
+            "MyApp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vsevolod Artemev",
+            "email": "vartemev@plesk.com"
+        }
+    ],
+    "scripts": {
+        "test": "phpunit --verbose tests"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
+}
