@@ -11,7 +11,7 @@ class IsPerfect
         $mid = $num % 2 === 0 ? $num / 2 : ($num - 1) / 2;
         $i = 2;
 
-        while($i < $mid && !in_array($i, $dividers)) {
+        while ($i < $mid && !in_array($i, $dividers)) {
             if ($num % $i === 0) {
                 $dividers[] = $i;
                 $dividers[] = $num / $i;

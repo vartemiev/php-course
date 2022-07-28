@@ -12,7 +12,7 @@ class IsBalanced
         for ($i = 0; $i < $stringLen; $i++) {
             if ($bracketsString[$i] === '(') {
                 $openedBracketsCount++;
-            } else if ($openedBracketsCount > 0) {
+            } elseif ($openedBracketsCount > 0) {
                 $openedBracketsCount--;
             } else {
                 return false;

@@ -1,9 +1,11 @@
 <?php
 
+namespace MyAppTest;
+
 use PHPUnit\Framework\TestCase;
 use MyApp\FizzBuzz;
 
-class FizzBuzz_Test extends TestCase
+class FizzBuzzTest extends TestCase
 {
     public function testFizzBuzz(): void
     {
