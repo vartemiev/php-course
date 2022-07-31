@@ -1,0 +1,23 @@
+{
+    "name": "vartemev/php-course",
+    "license": "UNLICENSED",
+    "autoload": {
+        "psr-4": {
+            "MyApp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vsevolod Artemev",
+            "email": "vartemev@plesk.com"
+        }
+    ],
+    "scripts": {
+        "test": "phpunit --verbose tests",
+        "lint": "phpcs --standard=PSR12 src/ tests/"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9",
+        "squizlabs/php_codesniffer": "*"
+    }
+}
