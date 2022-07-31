@@ -4,6 +4,7 @@ namespace MyAppTest;
 
 use PHPUnit\Framework\TestCase;
 use MyApp\BinarySum;
+use MyApp\Logger\FakeLogger;
 
 class BinarySumTest extends TestCase
 {
@@ -12,14 +13,14 @@ class BinarySumTest extends TestCase
      */
     public function testBinarySum($op1, $op2, $expected): void
     {
-        $inst = new BinarySum();
+        $inst = new BinarySum(new FakeLogger());
 
         $this->assertSame($inst->run($op1, $op2), $expected);
     }
 
     public function testBinarySumException(): void
     {
-        $inst = new BinarySum();
+        $inst = new BinarySum(new FakeLogger());
         $this->expectException(\ErrorException::class);
         $this->expectExceptionMessage('One of operands or both are invalid');
 
